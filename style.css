@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-color: #252525;
+}
+
+.test {
+    background-color: red;
+    width: 5rem;
+    height: 5rem;
+}
+
+.test:active {
+    background-color: blue;
+}
+
+.buttons-container {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    display: flex;
+    width: 7rem;
+    height: 30rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: none;
+    border-radius: 2rem;
+    outline: 2px solid black;
+    background-color: #151515;
+}
+
+.stem {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #0c0c0c;
+    width: 4rem;
+    height: 8rem;
+    outline: 3px solid #000;
+}
+
+.light {
+    margin: 3rem 3rem;
+    width: 12rem;
+    height: 12rem;
+    border: none;
+    border-radius: 6rem;
+    outline: 3px solid #000;
+    transition: 100ms;
+}
+
+.red {
+    background-color: #250606;
+}
+
+.red.on{
+    background-color: #9b1818;
+    box-shadow: 0 0 50px #bb1e1e, inset 0 0 20px #ec3f3f;
+}
+
+.yellow{
+    background-color: #1f1803;
+}
+
+.yellow.on{
+    background-color: #dbbf1e;
+    box-shadow: 0 0 50px #dbbf1e, inset 0 0 20px #e4d373;
+}
+
+.green {
+    background-color: #061b05;
+}
+
+.green.on{
+    background-color: #42c421;
+    box-shadow: 0 0 50px #42c421, inset 0 0 20px #8de473;
+}
+
+.button {
+    width: 5rem;
+    height: 5rem;
+    border-style: none;
+    border-radius: 8px;
+    transition: 80ms;
+}
+
+.button:hover {
+    transform: scale(105%);
+}
+
+.button.red {
+    background-color: #9b1818;
+}
+
+.button.red:hover {
+    background-color: #bb1e1e;
+}
+
+.button.yellow {
+    background-color: #dbbf1e;
+}
+
+.button.yellow:hover {
+    background-color: #eed548;
+}
+
+.button.green {
+    background-color: #42c442;
+}
+
+.button.green:hover {
+    background-color: #8de473;
+}

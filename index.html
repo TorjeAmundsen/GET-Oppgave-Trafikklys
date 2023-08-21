@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="buttons-container">
+        <button onclick="specificLight(0)" id="redbutton" class="red button">Red</button>
+        <button onclick="specificLight(1)" id="yellow-button" class="yellow button">Yellow</button>
+        <button onclick="specificLight(2)" id="green-button" class="green button">Green</button>
+        <button onclick="allOff()" id="all-on-button" class="button">All Off</button>
+        <button onclick="allOn()" id="all-off-button" class="button">All On</button>
+    </div>
+    <div class="stem"></div>
+    <div id="traffic-light" class="container">
+        <div id="red-light" class="red light on"></div>
+        <div id="yellow-light" class="yellow light on"></div>
+        <div id="green-light" class="green light on"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
