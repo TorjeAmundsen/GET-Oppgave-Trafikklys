@@ -6,7 +6,7 @@ const LIGHTS = [
 
 let currentLight = 0;
 let velocity = 1;
-let interval;
+let interval = null;
 
 const delay = (delayInms) => {
     return new Promise(resolve => setTimeout(resolve, delayInms));
@@ -14,6 +14,7 @@ const delay = (delayInms) => {
 
 const allOff = () => {
     clearInterval(interval);
+    interval = null;
     LIGHTS.forEach((e) => {
         e.classList.remove("on");
     });
@@ -21,6 +22,7 @@ const allOff = () => {
 
 const allOn = () => {
     clearInterval(interval);
+    interval = null;
     LIGHTS.forEach((e) => {
         e.classList.add("on");
     });
@@ -32,18 +34,21 @@ const randomNum = (min, max) => {
 
 const specificLight = (index) => {
     clearInterval(interval);
+    interval = null;
+    allOff();
     LIGHTS[index].classList.add("on");
     currentLight = index;
 }
 
 
 function toggleAutoLights() {
-    if (!running) {
+    if (interval === null) {
         specificLight(0);
         velocity = 1;
         interval = setInterval(autoLights, 1500);
     } else {
         clearInterval(interval);
+        interval = null;
     }
 }
 
