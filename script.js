@@ -8,10 +8,6 @@ let currentLight = 0;
 let velocity = 1;
 let interval = null;
 
-const delay = (delayInms) => {
-    return new Promise(resolve => setTimeout(resolve, delayInms));
-}
-
 const allOff = () => {
     clearInterval(interval);
     interval = null;
@@ -26,10 +22,6 @@ const allOn = () => {
     LIGHTS.forEach((e) => {
         e.classList.add("on");
     });
-}
-
-const randomNum = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 const specificLight = (index) => {
